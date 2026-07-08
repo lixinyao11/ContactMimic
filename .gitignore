@@ -1,0 +1,58 @@
+# Omniverse
+**/*.dmp
+**/.thumbs
+
+# Python
+.DS_Store
+**/*.egg-info/
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+**/*.pb
+
+# IDE
+**/.idea/
+**/.vscode/
+# Don't ignore the top-level .vscode directory as it is
+# used to configure VS Code settings
+!.vscode
+
+# Outputs
+**/runs/*
+**/logs/*
+**/recordings/*
+**/output/*
+**/outputs/*
+**/videos/*
+**/wandb/*
+**/.neptune/*
+docker/artifacts/
+*.tmp
+
+# Isaac-Sim packman
+_isaac_sim*
+_repo
+_build
+.lastformat
+
+*.csv
+*.pkl
+*.zarr
+*.npz
+*.npy
+
+# HUMOTO motion data is distributed via an external archive (see HUMOTO/README.md)
+# and is NOT tracked in this repo. Only README/MOCAP_FORMAT docs live here.
+HUMOTO/*
+!HUMOTO/README.md
+!HUMOTO/MOCAP_FORMAT.md
+
+**/assets/**
+!**/assets/*.yaml
+artifacts/
+LAFAN1_Retargeting_Dataset/
+replay_videos/
+
+tmp*/
+corl_paper/
+.claude/

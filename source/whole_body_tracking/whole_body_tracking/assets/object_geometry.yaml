@@ -1,0 +1,45 @@
+# Geometry configs for contact-classified scene objects.
+# Each key is matched against the object URDF path (first substring match wins).
+# Use _default as the fallback when no key matches.
+#
+# Fields (segmented=true only):
+#   z_min: float          — minimum Z of the collision mesh in object-local frame
+#   z_range: float        — Z extent of the collision mesh (z_max - z_min)
+#   segmented: bool       — true → height-based part classification; false → single part (z_min/z_range/part_thresholds ignored)
+#   part_thresholds: list — normalized-Z boundaries between parts
+#
+# Part IDs (segmented=true, 2 thresholds → 3 regions):
+#   z_norm < thresholds[0]                    → 3 (legs)
+#   thresholds[0] <= z_norm < thresholds[1]   → 1 (seat)
+#   z_norm >= thresholds[1]                   → 2 (backrest)
+#
+# Part IDs (segmented=false):
+#   all contacts → 1 (single contact surface)
+
+low_chair:
+  z_min: 0.0
+  # z_range: 0.51           # 0.58 m mesh height * 0.88 collision scale
+  z_range: 1.12           
+  segmented: true
+  part_thresholds: [0.5, 0.7]
+
+dining_chair:
+  z_min: 0.0
+  z_range: 1.35
+  segmented: true
+  part_thresholds: [0.4, 0.5]
+
+working_chair:
+  z_min: 0.0
+  z_range: 1.17
+  segmented: true
+  part_thresholds: [0.5, 0.7]
+
+table:
+  segmented: false        # single contact surface; z_min/z_range/part_thresholds are irrelevant
+
+_default:
+  z_min: 0.0
+  z_range: 0.51
+  segmented: true
+  part_thresholds: [0.5, 0.7]
