@@ -1,12 +1,12 @@
 # ContactMimic: Humanoid Object Interaction via Contact Control
 
-[[Website]](https://lixinyao11.github.io/contactmimic-page) | [[arXiv]](TODO) | [[Paper]](TODO)
+[[Website]](https://lixinyao11.github.io/contactmimic-page) | [[arXiv]](https://arxiv.org/abs/2607.08742) | [[Paper]](https://arxiv.org/pdf/2607.08742)
 
 ```bibtex
 @article{li2026contactmimic,
   title   = {ContactMimic: Humanoid Object Interaction via Contact Control},
   author  = {Li, Xinyao and He, Xialin and Dong, Runpei and Gupta, Saurabh},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2607.08742},
   year    = {2026}
 }
 ```
